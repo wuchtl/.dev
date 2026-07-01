@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #e4e4e4;
+      --accent: #e8729a;
+      --muted: #8a8f98;
+    }
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Instrument Sans", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid #1e2126;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    main h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      margin-bottom: 0.8rem;
+    }
+    main h1 span {
+      color: var(--accent);
+    }
+    main p {
+      color: var(--muted);
+      max-width: 32rem;
+      font-size: 1.05rem;
+    }
+    .dots::after {
+      content: '';
+      display: inline-block;
+      width: 1.2em;
+      text-align: left;
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+    @keyframes dots {
+      0% { content: ''; }
+      25% { content: '.'; }
+      50% { content: '..'; }
+      75% { content: '...'; }
+      100% { content: ''; }
+    }
+    footer {
+      padding: 1rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid #1e2126;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">wuchtl</div>
+    <div class="muted">:3</div>
+  </header>
+
+  <main>
+    <h1>Still <span>thinking</span> of stuff<span class="dots"></span></h1>
+    <p>Nothing here yet... Maybe some day :P</p>
+  </main>
+
+  <footer>
+    &copy; 2026 - All rights reserved.
+    <br>
+    mail@wuchtl.dev
+  </footer>
+</body>
+</html>
